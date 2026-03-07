@@ -51,7 +51,7 @@ FlatQuest's architecture is divided into three main components: a Client Fronten
 
 ## 🧠 Key Concepts & Architecture
 
-1. **Microservice-ish Architecture**: The backend logic is decoupled into a core REST API for CRUD operations (Authentication, Posts, Users) and a dedicated WebSocket server specifically handling real-time chat messages and notifications.
+1. **Architecture**: The backend logic is decoupled into a core REST API for CRUD operations (Authentication, Posts, Users) and a dedicated WebSocket server specifically handling real-time chat messages and notifications.
 2. **State Management**: Instead of prop drilling, `Zustand` provides elegant global state management alongside the React Context API (`AuthContext`, `SocketContext`). 
 3. **Data Fetching with Loaders**: Utilizing React Router v6's `loader` functions to pre-fetch data before navigating to specific routes (e.g., fetching a post before the listing page loads).
 4. **Security**: Sensitive routes are protected by robust JWT verification middleware (`verifyToken.js`) that checks HttpOnly cookies, mitigating XSS risks.
